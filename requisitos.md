@@ -1,0 +1,32 @@
+Sistema de Loja Online
+O sistema de loja online é uma aplicação desenvolvida para gerenciar as operações de uma pequena loja virtual. Ele permite que os usuários naveguem e comprem produtos, gerenciem suas contas, visualizem e acompanhem pedidos, e mantenham seus carrinhos de compras. O sistema é projetado para ser simples e intuitivo, facilitando a interação entre os clientes e a loja.
+
+Entidades e Atributos
+1. Produto (Produto)
+A entidade Produto representa os itens que estão disponíveis para compra na loja. Ela contém os seguintes atributos:
+
+id (String): Um identificador único para cada produto.
+nome (String): O nome do produto.
+descricao (String): Uma descrição detalhada do produto.
+preco (double): O preço do produto.
+quantidadeEstoque (int): A quantidade do produto disponível em estoque.
+2. Usuário (Usuario)
+A entidade Usuário representa os clientes que utilizam o sistema. Ela contém os seguintes atributos:
+
+idUsuario (String): Um identificador único para cada usuário.
+nomeUsuario (String): O nome de usuário, utilizado para login.
+senha (String): A senha do usuário, utilizada para autenticação.
+email (String): O endereço de email do usuário.
+endereco (String): O endereço de entrega do usuário.
+3. Pedido (Pedido)
+A entidade Pedido representa uma compra realizada por um usuário. Ela contém os seguintes atributos:
+
+idPedido (String): Um identificador único para cada pedido.
+usuario (Usuario): O usuário que realizou o pedido.
+produtos (List<Produto>): A lista de produtos incluídos no pedido.
+valorTotal (double): O valor total do pedido.
+status (String): O status atual do pedido (por exemplo, "Em Processamento", "Enviado", "Entregue").
+4. Carrinho de Compras (CarrinhoDeCompras)
+A entidade Carrinho de Compras representa o conjunto de produtos que um usuário pretende comprar. Ela contém os seguintes atributos:
+
+itens (Map<Produto, Integer>): Um mapa que relaciona cada produto com a quantidade que o usuário deseja comprar.

@@ -4,7 +4,7 @@
 ### Para executar este projeto
 - baixe ou clone o projeto `git clone https://github.com/fernandoosorio/ufpi-loja-api`
 
-- Acesse o diretório  `cd ufpi-estoque-api`
+- Acesse o diretório  `cd ufpi-loja-api`
 
 - Verificar versão do java ( `java --version`) deve estar na versão 17
 
@@ -18,7 +18,7 @@
 
 - Abrir o projeto na sua IDE de preferência.
 
-- Executar o projeto ( executar/debugar o arquivo `EstoqueApplication.java`)
+- Executar o projeto ( executar/debugar o arquivo `LojaApiApplication.java`)
 
 - Para visualizar o banco de dados:
     -   Acessar  http://localhost:8080/h2-console

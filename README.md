@@ -1,8 +1,8 @@
 
-# Sistema para Controle de uma Locadora de Veículos
+# Sistema de Loja Online
 
 ### Para executar este projeto
-- baixe ou clone o projeto `git clone https://github.com/fernandoosorio/ufpi-estoque-api`
+- baixe ou clone o projeto `git clone https://github.com/fernandoosorio/ufpi-loja-api`
 
 - Acesse o diretório  `cd ufpi-estoque-api`
 

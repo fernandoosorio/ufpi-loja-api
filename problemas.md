@@ -9,8 +9,8 @@ public List<Produto> aplicarDescontoEmProdutos(ProdutoDTO produtoDTO) throws Pro
 ```
 - Esse método aplicar um percentual de desconto a um produto ou a todos.
 - O método recebe como parâmetro `produtoDTO`.
-  - Se estiver preenchido o campo `produtoDTO.getNome()` o desconto deve ser aplicado apenas ao produtos que possuem esse nome (caso não existe produtos com o nome enviado disparar `ProdutoNaoExisteException`); 
-  - No caso desse campo `produtoDTO.getNome()` estar null/vazio deve ser aplicado a todos os produtos.
+  - Se estiver preenchido o campo `produtoDTO.getNome()` o desconto deve ser aplicado apenas aos produtos que possuem esse nome (caso não exista produtos com o nome enviado disparar `ProdutoNaoExisteException`); 
+  - No caso desse campo `produtoDTO.getNome()` estar null/vazio deve ser aplicado a TODOS os produtos.
   - O valor do desconto é enviado no campo `produtoDTO.getDesconto()`. Desconto deve ser valor maior que 0 e menor que 100%, senão deve disparar `DescontoForaIntervaloException`.
 
 

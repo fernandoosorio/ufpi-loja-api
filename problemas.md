@@ -13,7 +13,7 @@ public List<Produto> aplicarDescontoEmProdutos(ProdutoDTO produtoDTO) throws Pro
 
 **Lembre-se de exportar o chat `Ctrl+Shift+P | Chat: Export Session/Exportar Chat`**
 
-### Próximo
+## Responder sem ferramentas de apoio à geração de código
 
 2. Implementar o método `VeiculoService.aumentarDiaria(int tipo, double taxaAumento)` que registra o aumento das diárias dos veículos, usando os códigos para o tipo (parâmetro do método):  
 - 0 (todos os veículos), 

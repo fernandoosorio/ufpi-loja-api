@@ -6,8 +6,8 @@ O sistema de loja online é uma aplicação desenvolvida para gerenciar as opera
     A entidade Produto representa os itens que estão disponíveis para compra na loja. Ela contém os seguintes atributos:
     - nome (String): O nome do produto.
     - descricao (String): Uma descrição detalhada do produto.
-    - preco (double): O preço do produto.
-    - quantidadeEstoque (int): A quantidade do produto disponível em estoque.
+    - preco (Double): O preço do produto.
+    - quantidadeEstoque (Integer): A quantidade do produto disponível em estoque.
 2. Usuário (Usuario)
     A entidade Usuário representa os clientes que utilizam o sistema. Ela contém os seguintes atributos:
 

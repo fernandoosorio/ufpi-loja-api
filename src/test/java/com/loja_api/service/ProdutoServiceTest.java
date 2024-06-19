@@ -72,7 +72,7 @@ public class ProdutoServiceTest {
         });
 
         assertThrows(DescontoForaIntervaloException.class, () -> {
-            ProdutoDTO produtoDTO = new ProdutoDTO(Long.valueOf(1), "Produto1", null, null, null, Double.valueOf(0));
+            ProdutoDTO produtoDTO = new ProdutoDTO(1L, "Produto1", null, null, null, Double.valueOf(0));
             produtoService.aplicarDescontoEmProdutos(produtoDTO);
         });
     }

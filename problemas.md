@@ -1,6 +1,6 @@
 # Problemas
 
-*Observação:* apenas a classe `ProdutoService` deve ser alterada, as classes controller e repository já possuem os métodos suficientes para executar o código sem erros.
+**Observação:** apenas a classe `ProdutoService` deve ser alterada, as classes controller e repository já possuem os métodos suficientes para executar o código sem erros.
 
 ## Responder usando COPILOT
  1. Implementar o método `ProdutoService.aplicarDescontoEmProdutos(ProdutoDTO produtoDTO)` chamado pelo controller `ProdutoController`.

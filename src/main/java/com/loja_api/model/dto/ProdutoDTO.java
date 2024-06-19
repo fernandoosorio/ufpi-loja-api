@@ -9,4 +9,5 @@ public class ProdutoDTO {
     private String descricao;
     private double preco;
     private int quantidadeEstoque;
+    private Double desconto;
 }

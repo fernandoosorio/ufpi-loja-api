@@ -1,16 +1,19 @@
 # Problemas
 ## Responder usando COPILOT
- 1. Implementar o método `VeiculoService.registrarAluguel(placa, data, dias, cpf)` chamado dentro do método  `registrarAluguel` do controller `LocadadoraImplController.java`.
-Esse método deve disparar as exceções VeiculoNaoCadastrado, VeiculoAlugado, ClienteNaoCadastrado  conforme assinatura do método. O método recebe os parâmetros placa, dataInicio do aluguel, o número de dias e o CPF do cliente que está realizando o aluguel. 
-Abaixo o trecho de código que chama esse método:
-
-```java
-public void registrarAluguel(String placa, Date data, int dias, Long cpf) throws VeiculoNaoCadastrado, VeiculoAlugado, ClienteNaoCadastrado;
+ 1. Implementar o método `ProdutoService.aplicarDescontoEmProdutos(ProdutoDTO produtoDTO)` pelo controller `ProdutoController`.
+ ```java
+public List<Produto> aplicarDescontoEmProdutos(ProdutoDTO produtoDTO) throws ProdutoNaoExisteException, DescontoForaIntervaloException;
 ```
-Observações: 
-  - A classe `Aluguel` precisar ter preenchidos os atributos: `cliente`, `veiculo`,`dataInicio`, `dataFim` e `totalAluguel(valor total devido pelo aluguel)` preenchidos, inclusive essa classe possui um construtor com esses campos nessa ordem.
 
-**Lembre-se de exportar o chat `Ctrl+Shift+P | Chat: Export Session...`**
+- Esse método deve disparar as exceções ProdutoNaoExisteException, DescontoForaIntervaloException  conforme assinatura do método. 
+
+- O método recebe como parâmetro `produtoDTO`.
+  - Se estiver preenchido o campo `produtoDTO.getNome()` o desconto deve ser aplicado apenas ao produtos que possuem esse nome (caso não existe produtos com o nome enviado disparar ProdutoNaoExisteException); 
+  - No caso desse campo `produtoDTO.getNome()` estar null/vazio deve ser aplicado a todos os produtos.
+  - O valor do desconto é enviado no campo `produtoDTO.getDesconto()`. Desconto deve ser valor maior que 0 e menor que 100%. 
+
+
+**Lembre-se de exportar o chat `Ctrl+Shift+P | Chat: Export Session/Exportar Chat`**
 
 ### Próximo
 

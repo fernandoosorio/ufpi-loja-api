@@ -57,6 +57,13 @@ public class ProdutoController {
         return ResponseEntity.ok(produtoDTOs);
     }
 
+    @GetMapping("/desconto")
+    public ResponseEntity<List<ProdutoDTO>> aplicarDescontoEmProdutos(@RequestBody ProdutoDTO produtoDTO)  throws Exception{
+        List<Produto> produtos = produtoService.aplicarDescontoEmProdutos(produtoDTO);
+        List<ProdutoDTO> produtoDTOs = produtos.stream().map(this::toDto).collect(Collectors.toList());
+        return ResponseEntity.ok(produtoDTOs);
+    }
+
     private ProdutoDTO toDto(Produto produto) {
         ProdutoDTO dto = new ProdutoDTO();
         dto.setId(produto.getId());

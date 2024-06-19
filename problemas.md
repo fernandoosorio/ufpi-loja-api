@@ -1,10 +1,13 @@
 # Problemas
+
+*Observação:* apenas a classe `ProdutoService` deve ser alterada, as classes controller e repository já possuem os métodos suficientes para executar o código sem erros.
+
 ## Responder usando COPILOT
- 1. Implementar o método `ProdutoService.aplicarDescontoEmProdutos(ProdutoDTO produtoDTO)` pelo controller `ProdutoController`.
+ 1. Implementar o método `ProdutoService.aplicarDescontoEmProdutos(ProdutoDTO produtoDTO)` chamado pelo controller `ProdutoController`.
  ```java
 public List<Produto> aplicarDescontoEmProdutos(ProdutoDTO produtoDTO) throws ProdutoNaoExisteException, DescontoForaIntervaloException;
 ```
-
+- Esse método aplicar um percentual de desconto a um produto ou a todos.
 - O método recebe como parâmetro `produtoDTO`.
   - Se estiver preenchido o campo `produtoDTO.getNome()` o desconto deve ser aplicado apenas ao produtos que possuem esse nome (caso não existe produtos com o nome enviado disparar `ProdutoNaoExisteException`); 
   - No caso desse campo `produtoDTO.getNome()` estar null/vazio deve ser aplicado a todos os produtos.
@@ -15,33 +18,16 @@ public List<Produto> aplicarDescontoEmProdutos(ProdutoDTO produtoDTO) throws Pro
 
 ## Responder sem ferramentas de apoio à geração de código
 
-2. Implementar o método `VeiculoService.aumentarDiaria(int tipo, double taxaAumento)` que registra o aumento das diárias dos veículos, usando os códigos para o tipo (parâmetro do método):  
-- 0 (todos os veículos), 
-- 1 (moto), 2 (carro), 
-- 3 (caminhão) ou
-- 4 (ônibus) 
-- Senão lancar exceção `TipoVeiculoDesconhecido`
-
-A taxaAumento é um valor entre 0 e 100, que representa a porcentagem de aumento da diária, senão lançar a exceção `TaxaAumentoForaIntervalo`.
+2. Implementar o método `ProdutoService.verificarDisponibilidade(ProdutoDTO produtoDTO)` chamado pelo controller `ProdutoController`.
 
 ```java
- @Override
-public void aumentarDiaria(int tipo, double taxaAumento);
+
+ public boolean verificarDisponibilidade(ProdutoDTO produtoDTO) throws ProdutoNaoExisteException;
 ```
 
-**Lembre-se de exportar o chat `Ctrl+Shift+P | Chat: Export Session...`**
+- Esse método verifica se um determinado produto possui estoque.
+- Se o produto não existir ( `produtoDTO.getNome()` ) disparar a exceção `ProdutoNaoExisteException`.
+- Se o produto existir e o estoque for maior que zero returnar true, senão false.
 
-### Próximo
 
-3. Implementar o método `editar` no controller `LocadoraImplController` que possui a seguinte assinatura:
 
-```java
-@PutMapping("/edit/cliente/{id}") 
-    public ResponseEntity<ClienteDto> editar(@RequestBody  ClienteDto c, @PathVariable Integer id) throws ClienteNaoCadastrado, SQLException;
-```
-
-Esse método será responsável por editar um cliente caso ele exista ou disparar uma exceção `ClienteNaoCadastrado` quando o cliente não existir.
-
-Neste problema será necessário, ainda o método `editar` em `ClienteService.java` para realizar as validações e persistir a entidade.
-
-**Lembre-se de exportar o chat `Ctrl+Shift+P | Chat: Export Session...`**

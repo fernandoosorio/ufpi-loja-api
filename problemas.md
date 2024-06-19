@@ -5,12 +5,10 @@
 public List<Produto> aplicarDescontoEmProdutos(ProdutoDTO produtoDTO) throws ProdutoNaoExisteException, DescontoForaIntervaloException;
 ```
 
-- Esse método deve disparar as exceções ProdutoNaoExisteException, DescontoForaIntervaloException  conforme assinatura do método. 
-
 - O método recebe como parâmetro `produtoDTO`.
-  - Se estiver preenchido o campo `produtoDTO.getNome()` o desconto deve ser aplicado apenas ao produtos que possuem esse nome (caso não existe produtos com o nome enviado disparar ProdutoNaoExisteException); 
+  - Se estiver preenchido o campo `produtoDTO.getNome()` o desconto deve ser aplicado apenas ao produtos que possuem esse nome (caso não existe produtos com o nome enviado disparar `ProdutoNaoExisteException`); 
   - No caso desse campo `produtoDTO.getNome()` estar null/vazio deve ser aplicado a todos os produtos.
-  - O valor do desconto é enviado no campo `produtoDTO.getDesconto()`. Desconto deve ser valor maior que 0 e menor que 100%. 
+  - O valor do desconto é enviado no campo `produtoDTO.getDesconto()`. Desconto deve ser valor maior que 0 e menor que 100%, senão deve disparar `DescontoForaIntervaloException`.
 
 
 **Lembre-se de exportar o chat `Ctrl+Shift+P | Chat: Export Session/Exportar Chat`**

@@ -55,13 +55,13 @@ public class ProdutoService {
     }
 
     //Este problema deve ser resolvido usando COPILOT
-    public List<Produto> aplicarDescontoEmProdutos(ProdutoDTO produtoDTO) throws ProdutoNaoExisteException,DescontoForaIntervaloException {
-        throw new UnsupportedOperationException("Implementar este método'aplicarDescontoEmProdutos'");
-    }
+public List<Produto> aplicarDescontoEmProdutos(ProdutoDTO produtoDTO) throws ProdutoNaoExisteException, DescontoForaIntervaloException {
+    throw new UnsupportedOperationException("Unimplemented method 'aplicarDescontoEmProdutos'");
+}
 
 
     //Este problema deve ser resolvido sem usar feramentas de geração de código
-    public boolean verificarDisponibilidade(ProdutoDTO produtoDTO) {
-        throw new UnsupportedOperationException("Unimplemented method 'verificarDisponibilidade'");
+    public boolean verificarDisponibilidade(ProdutoDTO produtoDTO) throws ProdutoNaoExisteException{
+       throw new UnsupportedOperationException("Unimplemented method 'verificarDisponibilidade'");
     }
 }

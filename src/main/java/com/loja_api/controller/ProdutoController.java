@@ -64,7 +64,7 @@ public class ProdutoController {
         return ResponseEntity.ok(produtoDTOs);
     }
 
-    @GetMapping("/verificarDisponibilidade")
+    @PostMapping("/verificarDisponibilidade")
     public ResponseEntity<Boolean> verificarDisponibilidade(@RequestBody ProdutoDTO produtoDTO) throws Exception {
         
         boolean disponibilidade = produtoService.verificarDisponibilidade(produtoDTO);

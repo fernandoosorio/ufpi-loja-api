@@ -53,9 +53,9 @@ public class ProdutoService {
     }
 
     //Este problema deve ser resolvido usando COPILOT
-public List<Produto> aplicarDescontoEmProdutos(ProdutoDTO produtoDTO) throws ProdutoNaoExisteException, DescontoForaIntervaloException {
-    throw new UnsupportedOperationException("Unimplemented method 'aplicarDescontoEmProdutos'");
-}
+    public List<Produto> aplicarDescontoEmProdutos(ProdutoDTO produtoDTO) throws ProdutoNaoExisteException, DescontoForaIntervaloException {
+        throw new UnsupportedOperationException("Unimplemented method 'aplicarDescontoEmProdutos'");
+    }
 
 
     //Este problema deve ser resolvido sem usar feramentas de geração de código

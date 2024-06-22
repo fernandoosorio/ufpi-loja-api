@@ -11,11 +11,9 @@ import com.loja_api.model.dto.ProdutoDTO;
 import com.loja_api.repository.ProdutoRepository;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 @Service
 @AllArgsConstructor
-@NoArgsConstructor
 public class ProdutoService {
 
     private ProdutoRepository produtoRepository;
